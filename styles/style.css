@@ -59,13 +59,13 @@
   margin-inline: auto;
   border: 2px solid var(--text-color, #000000);
   background: var(--page-background-color, #ffffff);
-  max-inline-size: 696px;
+  max-inline-size: 700px;
 }
 
 .main {
   display: grid;
   justify-items: center;
-  gap: 57px;
+  gap: 51px;
   padding-block-end: 105px;
 }
 
@@ -204,6 +204,7 @@
 
 .modal__button {
   inline-size: 100%;
+  padding: 10px 36px;
 }
 
 /* Стили диалогового окна конец */
@@ -240,16 +241,16 @@
   font-size: 14px;
   line-height: normal;
   text-transform: uppercase;
-  text-shadow: 1px 2px 2px var(--page-background-color, #ffffff);
-  inset-inline-end: 13px;
-  inset-block-start: 24px;
+  text-shadow: 1px 1px 1px var(--page-background-color, #ffffff);
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
   mix-blend-mode: hard-light;
 }
 
 .card__img {
   display: block;
   object-fit: cover;
-  object-position: right;
+  object-position: center;
   inline-size: 100%;
   aspect-ratio: 1 / 1;
 }
@@ -269,6 +270,12 @@
   align-items: stretch;
   gap: 5px;
   padding: 25px 25px 23px 25px;
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  padding: 0;
 }
 
 /* Стили кнопочек Лайк начало */
@@ -295,7 +302,6 @@
   position: relative;
   z-index: 1;
   border: 2px solid var(--text-color, #000000);
-  padding: 10px 36px;
   font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
   font-size: 14px;
   text-transform: inherit;
@@ -335,12 +341,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   padding: 15px 20px;
 }
 
-.button__text,
-.button__icon {
+.button__text {
   color: var(--button-text-color, #ffffff);
   mix-blend-mode: difference;
 }
@@ -364,7 +369,7 @@
 @media (width < 376px) {
   .modal {
     padding: 28px 34px 28px 40px;
-    max-inline-size: 340px;
+    min-inline-size: 340px;
   }
 
   .button--save {
